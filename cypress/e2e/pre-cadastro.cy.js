@@ -4,7 +4,7 @@ var faker = require('faker-br'); //Para utilização do faker
 describe('Funcionalidade Pré-Cadastro', () => {
 
     beforeEach(() => {
-        cy.visit ('http://lojaebac.ebaconline.art.br/minha-conta/') //Acessa a url no inicio de cada teste
+        cy.visit ('minha-conta/') //Acessa a url no inicio de cada teste
     });
     
 
