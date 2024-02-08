@@ -56,5 +56,13 @@ context('Funcionalidade Login', () =>{
     
     })
 
+
+
+    it.only('Deve fazer login com sucesso - usando Comandos customizados', () => {
+        cy.login('aluno_ebac@teste.com','teste@teste.com')
+        cy.get('.page-title').should('contain', 'Minha conta')
+        
+    });
+
     
 })
