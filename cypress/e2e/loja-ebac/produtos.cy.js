@@ -1,18 +1,30 @@
 /// <reference types="cypress" />
+import produtosPage from "../../support/page-objects/produtos.page";
 
 describe('Funcionalidade Página de Produtos', () => {
 
     beforeEach(() => {
-        cy.visit('produtos/')
+        produtosPage.visitarUrl()
     });
     
     
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block').first().click() //.firt : - primeiro item da lista - .eq(2) : segundo item da lista - .last : ultimo item da lista
+        produtosPage.buscarProdutoLista ('Ariel Roll Sleeve Sweatshirt')
+        cy.get('.product_title').should('contain', 'Ariel Roll Sleeve Sweatshirt')
          
     });
-    
+
+    it.only('Deve buscar um produto com sucesso', () => {
+        produtosPage.buscarProdutos('Arcadio Gym Short')
+        cy.get('.product_title').should('contain','Arcadio Gym Short')
+        
+    });
+
+    it('Deve visitar a página do produto', () => {
+        
+    });
+
     it('Deve adicionar um produto no carrinho', () => {
         var quantidade = 3
 

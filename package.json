@@ -4,8 +4,10 @@
   "description": "Teste UI utilizando Cypress - Modulo 11 - Curso EBAC",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --browser chrome",
+    "cy:dash" : "npx cypress run --record --key f789ed78-8f99-4172-8346-c524a6f7217c"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
